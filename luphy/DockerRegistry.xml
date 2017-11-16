@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-15</Date>
+	<Beta>False</Beta>
+	<Name>DockerRegistry</Name>
+	<Project>https://docs.docker.com/registry/</Project>
+	<Overview>
+		A private Docker registry for storing container images.
+	</Overview>
+	<Description>
+		A private Docker registry for storing container images.
+	</Description>
+	<Registry>https://hub.docker.com/_/registry/</Registry>
+	<GitHub>https://github.com/docker/distribution</GitHub>
+	<Repository>registry:2.6.2</Repository>
+	<Privileged>false</Privileged>
+	<Network>bridge</Network>
+	<Icon>https://www.docker.com/sites/default/files/mono_vertical_large.png</Icon>
+	<Config 
+	Type="Port" 
+	Name="Docker Registry"
+	Target="5000" 
+	Default="5000" 
+	Mode="tcp" 
+	Description="This is the port the Docker Registry listens on" 
+	Display="always" 
+	Required="true">5000</Config>
+</Containers>
