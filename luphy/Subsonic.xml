@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-16</Date>
+	<Beta>False</Beta>
+	<Name>Subsonic</Name>
+	<Project>http://subsonic.org/</Project>
+	<Overview>
+		Self-hosted music library and player.
+	</Overview>
+	<Description>
+		Self-hosted music library and player.
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/subsonic/</Registry>
+	<GitHub>https://github.com/adammillerio/docker-subsonic</GitHub>
+	<Repository>aemiller/subsonic:latest</Repository>
+	<Privileged>false</Privileged>
+	<Network>bridge</Network>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-subsonic/master/icons/Subsonic.png</Icon>
+	<Config 
+	Type="Port" 
+	Name="Subsonic HTTP"
+	Target="4040"
+	Default="4040" 
+	Mode="tcp" 
+	Description="This is the port the Subsonic web interface listens on" 
+	Display="always" 
+	Required="true">4040</Config>
+</Containers>
