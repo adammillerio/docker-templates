@@ -15,7 +15,14 @@
 	<Repository>aemiller/subsonic:latest</Repository>
 	<Privileged>false</Privileged>
 	<Network>bridge</Network>
-	<Icon>https://raw.githubusercontent.com/adammillerio/docker-subsonic/master/icons/Subsonic.png</Icon>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Subsonic.png</Icon>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Subsonic</HostDir>
+			<ContainerDir>/var/subsonic</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
 	<Config 
 	Type="Port" 
 	Name="Subsonic HTTP"
