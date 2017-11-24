@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-23</Date>
+	<Beta>False</Beta>
+	<Name>RuTorrent</Name>
+	<Project>https://github.com/rakshasa/rtorrent</Project>
+	<Overview>
+		rTorrent BitTorrent client and RuTorrent web interface
+	</Overview>
+	<Description>
+		rTorrent BitTorrent client and RuTorrent web interface
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/rutorrent/</Registry>
+	<GitHub>https://github.com/adammillerio/docker-rutorrent</GitHub>
+	<Repository>aemiller/rutorrent:latest</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+		<Name>PUID</Name>
+		<Value>99</Value>
+		</Variable>
+		<Variable>
+		<Name>PGID</Name>
+		<Value>100</Value>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>80</HostPort>
+			<ContainerPort>80</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		<Port>
+			<HostPort>51413</HostPort>
+			<ContainerPort>51413</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		<Port>
+			<HostPort>6881</HostPort>
+			<ContainerPort>6881</ContainerPort>
+			<Protocol>udp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+		<HostDir></HostDir>
+		<ContainerDir>/config</ContainerDir>
+		<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+		<HostDir></HostDir>
+		<ContainerDir>/downloads</ContainerDir>
+		<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/RuTorrent.png</Icon>
+</Containers>
