@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-26</Date>
+	<Beta>False</Beta>
+	<Name>cAdvisor</Name>
+	<Project>https://github.com/google/cadvisor</Project>
+	<Overview>
+		cAdvisor - Google's container monitoring solution
+	</Overview>
+	<Description>
+		cAdvisor - Google's container monitoring solution
+	</Description>
+	<Registry>https://hub.docker.com/r/google/cadvisor/</Registry>
+	<GitHub>https://github.com/google/cadvisor</GitHub>
+	<Repository>google/cadvisor:v0.28.2</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>8080</HostPort>
+			<ContainerPort>8080</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/</HostDir>
+			<ContainerDir>/rootfs</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/var/run</HostDir>
+			<ContainerDir>/var/run</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+        <Volume>
+			<HostDir>/sys</HostDir>
+			<ContainerDir>/sys</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+        <Volume>
+			<HostDir>/var/lib/docker/</HostDir>
+			<ContainerDir>/var/lib/docker</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+        <Volume>
+			<HostDir>/dev/disk/</HostDir>
+			<ContainerDir>/dev/disk</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/cAdvisor.png</Icon>
+</Containers>
