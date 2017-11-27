@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-26</Date>
+	<Beta>False</Beta>
+	<Name>Grafana</Name>
+	<Project>https://github.com/grafana/grafana</Project>
+	<Overview>
+		Grafana dashboard and monitoring application
+	</Overview>
+	<Description>
+		Grafana dashboard and monitoring application
+	</Description>
+	<Registry>https://hub.docker.com/r/grafana/grafana/</Registry>
+	<GitHub>https://github.com/grafana/grafana</GitHub>
+	<Repository>grafana/grafana:4.6.2</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>3000</HostPort>
+			<ContainerPort>3000</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Grafana/data</HostDir>
+			<ContainerDir>/var/lib/grafana</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Grafana/grafana.ini</HostDir>
+			<ContainerDir>/etc/grafana/grafana.ini</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+        <Volume>
+			<HostDir>/mnt/user/appdata/Grafana/logs</HostDir>
+			<ContainerDir>/var/log/grafana</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Grafana.png</Icon>
+</Containers>
