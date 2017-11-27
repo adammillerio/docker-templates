@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-26</Date>
+	<Beta>False</Beta>
+	<Name>NodeExporter</Name>
+	<Project>https://github.com/prometheus/node_exporter</Project>
+	<Overview>
+		Prometheus Node Exporter - Prometheus exporter for system metrics
+	</Overview>
+	<Description>
+		Prometheus Node Exporter - Prometheus exporter for system metrics
+	</Description>
+	<Registry>https://quay.io/repository/prometheus/node-exporter</Registry>
+	<GitHub>https://github.com/prometheus/node_exporter</GitHub>
+	<Repository>quay.io/prometheus/node_exporter:v0.15.1 --path.procfs=/host/proc --path.sysfs=/host/sys</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>host</Mode>
+		<Publish>
+		<Port>
+			<HostPort>9100</HostPort>
+			<ContainerPort>9100</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/proc</HostDir>
+			<ContainerDir>/host/proc</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/sys</HostDir>
+			<ContainerDir>/host/sys</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+	</Data>
+    <ExtraParams>--pid="host"</ExtraParams>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Prometheus.png</Icon>
+</Containers>
