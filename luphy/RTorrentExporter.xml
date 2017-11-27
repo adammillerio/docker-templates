@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-26</Date>
+	<Beta>False</Beta>
+	<Name>RTorrentExporter</Name>
+	<Project>https://github.com/mdlayher/rtorrent_exporter</Project>
+	<Overview>
+		rTorrent metrics exporter for Prometheus
+	</Overview>
+	<Description>
+		rTorrent metrics exporter for Prometheus
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/rtorrent-exporter/</Registry>
+	<GitHub>https://github.com/adammillerio/rtorrent_exporter</GitHub>
+	<Repository>aemiller/rtorrent-exporter:latest</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>9135</HostPort>
+			<ContainerPort>9135</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+    <Environment>
+		<Variable>
+            <Name>RTORRENT_ADDR</Name>
+            <Value></Value>
+		</Variable>
+		<Variable>
+            <Name>RTORRENT_USERNAME</Name>
+            <Value></Value>
+		</Variable>
+        <Variable>
+            <Name>RTORRENT_PASSWORD</Name>
+            <Value></Value>
+		</Variable>
+        <Variable>
+            <Name>TELEMETRY_ADDR</Name>
+            <Value>:9135</Value>
+		</Variable>
+        <Variable>
+            <Name>TELEMETRY_PATH</Name>
+            <Value>/metrics</Value>
+		</Variable>
+	</Environment>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Prometheus.png</Icon>
+</Containers>
