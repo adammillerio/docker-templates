@@ -34,7 +34,7 @@
 		<Volume>
 			<HostDir>/mnt/user/appdata/Grafana/grafana.ini</HostDir>
 			<ContainerDir>/etc/grafana/grafana.ini</ContainerDir>
-			<Mode>ro</Mode>
+			<Mode>rw</Mode>
 		</Volume>
         <Volume>
 			<HostDir>/mnt/user/appdata/Grafana/logs</HostDir>
