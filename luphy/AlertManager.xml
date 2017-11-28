@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-11-27</Date>
+	<Beta>False</Beta>
+	<Name>AlertManager</Name>
+	<Project>https://github.com/prometheus/alertmanager</Project>
+	<Overview>
+		AlertManager - Alerting service for Prometheus
+	</Overview>
+	<Description>
+		AlertManager - Alerting service for Prometheus
+	</Description>
+	<Registry>https://quay.io/repository/prometheus/alertmanager</Registry>
+	<GitHub>https://github.com/prometheus/alertmanager</GitHub>
+	<Repository>quay.io/prometheus/alertmanager:v0.11.0</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>9093</HostPort>
+			<ContainerPort>9093</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/AlertManager/data</HostDir>
+			<ContainerDir>/alertmanager</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/AlertManager/alertmanager.yml</HostDir>
+			<ContainerDir>/etc/alertmanager/config.yml</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Prometheus.png</Icon>
+</Containers>
