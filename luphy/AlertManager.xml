@@ -31,6 +31,11 @@
 			<ContainerDir>/alertmanager</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
+        <Volume>
+			<HostDir>/mnt/user/appdata/AlertManager/templates</HostDir>
+			<ContainerDir>/etc/alertmanager/template</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
 		<Volume>
 			<HostDir>/mnt/user/appdata/AlertManager/alertmanager.yml</HostDir>
 			<ContainerDir>/etc/alertmanager/config.yml</ContainerDir>
