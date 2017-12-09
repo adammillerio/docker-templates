@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2017-12-09</Date>
+	<Beta>False</Beta>
+	<Name>Phlex</Name>
+	<Project>https://github.com/d8ahazard/Phlex</Project>
+	<Overview>
+		Phlex - Google Home adapter for Plex and other services
+	</Overview>
+	<Description>
+		Phlex - Google Home adapter for Plex and other services
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/phlex/</Registry>
+	<GitHub>https://github.com/d8ahazard/Phlex/GitHub>
+	<Repository>aemiller/phlex:latest</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Name>TZ</Name>
+			<Value>America/New_York</Value>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>5666</HostPort>
+			<ContainerPort>5666</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		<Port>
+			<HostPort>5667</HostPort>
+			<ContainerPort>5667</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		<Port>
+			<HostPort>9000</HostPort>
+			<ContainerPort>9000</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Phlex</HostDir>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Phlex.png</Icon>
+</Containers>
