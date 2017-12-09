@@ -11,7 +11,7 @@
 		Phlex - Google Home adapter for Plex and other services
 	</Description>
 	<Registry>https://hub.docker.com/r/aemiller/phlex/</Registry>
-	<GitHub>https://github.com/d8ahazard/Phlex/GitHub>
+	<GitHub>https://github.com/d8ahazard/Phlex/GitHub</GitHub>
 	<Repository>aemiller/phlex:latest</Repository>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
