@@ -23,6 +23,11 @@
 			<ContainerPort>8080</ContainerPort>
 			<Protocol>tcp</Protocol>
 		</Port>
+		<Port>
+			<HostPort>50000</HostPort>
+			<ContainerPort>50000</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
 		</Publish>
 	</Networking>
 	<Data>
