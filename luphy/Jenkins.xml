@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-02-16</Date>
+	<Beta>False</Beta>
+	<Name>Jenkins</Name>
+	<Project>https://jenkins.io</Project>
+	<Overview>
+		Jenkins automation server
+	</Overview>
+	<Description>
+		Jenkins automation server
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/jenkins/</Registry>
+	<GitHub>https://github.com/jenkinsci/jenkins</GitHub>
+	<Repository>aemiller/jenkins:2.89.4</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>8080</HostPort>
+			<ContainerPort>8080</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Jenkins</HostDir>
+			<ContainerDir>/var/jenkins_home</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Jenkins.png</Icon>
+</Containers>
