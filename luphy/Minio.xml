@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-02-17</Date>
+	<Beta>False</Beta>
+	<Name>Minio</Name>
+	<Project>https://www.minio.io/</Project>
+	<Overview>
+		Minio object storage server
+	</Overview>
+	<Description>
+		Minio object storage server
+	</Description>
+	<Registry>https://hub.docker.com/r/minio/minio/</Registry>
+	<GitHub>https://github.com/minio/minio</GitHub>
+	<Repository>minio/minio:latest server /data</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Name>MINIO_ACCESS_KEY</Name>
+			<Value>AKIAIOSFODNN7EXAMPLE</Value>
+		</Variable>
+		<Variable>
+			<Name>MINIO_SECRET_KEY</Name>
+			<Value>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</Value>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+		<Port>
+			<HostPort>9000</HostPort>
+			<ContainerPort>9000</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/minio</HostDir>
+			<ContainerDir>/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Minio</HostDir>
+			<ContainerDir>/root/.minio</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Minio.png</Icon>
+</Containers>
