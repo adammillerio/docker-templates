@@ -12,7 +12,8 @@
 	</Description>
 	<Registry>https://hub.docker.com/r/minio/minio/</Registry>
 	<GitHub>https://github.com/minio/minio</GitHub>
-	<Repository>minio/minio:latest server /data</Repository>
+	<Repository>minio/minio:latest</Repository>
+	<PostArgs>server /data</PostArgs>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Environment>

@@ -12,7 +12,8 @@
 	</Description>
 	<Registry>https://quay.io/repository/prometheus/node-exporter</Registry>
 	<GitHub>https://github.com/prometheus/node_exporter</GitHub>
-	<Repository>quay.io/prometheus/node-exporter:v0.15.1 --path.procfs=/host/proc --path.sysfs=/host/sys</Repository>
+	<Repository>quay.io/prometheus/node-exporter:v0.15.1</Repository>
+	<PostArgs>--path.procfs=/host/proc --path.sysfs=/host/sys</PostArgs>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Networking>
