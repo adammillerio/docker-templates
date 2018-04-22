@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-04-22</Date>
+	<Beta>False</Beta>
+	<Name>Duplicati</Name>
+	<Project>https://www.duplicati.com/</Project>
+	<Overview>
+		Duplicati backup application
+	</Overview>
+	<Description>
+		Duplicati backup application
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/duplicati/</Registry>
+	<GitHub>https://github.com/duplicati/duplicati</GitHub>
+	<Repository>aemiller/duplicati:latest</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Value>99</Value>
+			<Name>PUID</Name>
+		</Variable>
+		<Variable>
+			<Value>100</Value>
+			<Name>PGID</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8200</HostPort>
+				<ContainerPort>8200</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<ContainerDir>/tmp</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<ContainerDir>/backups</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<ContainerDir>/source</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Duplicati.png</Icon>
+</Containers>
