@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-09-12</Date>
+	<Beta>False</Beta>
+	<Name>ZoneMinder</Name>
+	<Project>https://zoneminder.com/</Project>
+	<Overview>
+		ZoneMinder Surveillance Server
+	</Overview>
+	<Description>
+		ZoneMinder Surveillance Server
+	</Description>
+	<Registry>https://hub.docker.com/r/aemiller/zoneminder/</Registry>
+	<Repository>aemiller/zoneminder:latest</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<ExtraParams>--shm-size="512m"</ExtraParams>
+	<Environment>
+		<Variable>
+			<Value>America/New_York</Value>
+			<Name>TZ</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>443</HostPort>
+				<ContainerPort>443</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/ZoneMinder/events</HostDir>
+			<ContainerDir>/var/lib/zoneminder/events</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/ZoneMinder/images</HostDir>
+			<ContainerDir>/var/lib/zoneminder/images</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/ZoneMinder/mysql</HostDir>
+			<ContainerDir>/var/lib/mysql</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/ZoneMinder/logs</HostDir>
+			<ContainerDir>/var/log/zm</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/ZoneMinder.png</Icon>
+</Containers>
