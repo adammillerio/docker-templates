@@ -56,6 +56,11 @@
 				<ContainerPort>9000</ContainerPort>
 				<Protocol>tcp</Protocol>
 			</Port>
+			<Port>
+				<HostPort>8000</HostPort>
+				<ContainerPort>8000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
 		</Publish>
 	</Networking>
 	<Data>
