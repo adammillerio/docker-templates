@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-09-12</Date>
+	<Beta>False</Beta>
+	<Name>Drone Agent</Name>
+	<Project>https://drone.io</Project>
+	<Overview>
+		Drone CI/CD Agent
+	</Overview>
+	<Description>
+		Drone CI/CD Agent
+	</Description>
+	<Registry>https://hub.docker.com/r/drone/agent/</Registry>
+	<Repository>drone/agent:0.8</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_SERVER</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_SECRET</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/var/run/docker.sock</HostDir>
+			<ContainerDir>/var/run/docker.sock</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Drone-Agent.png</Icon>
+</Containers>
