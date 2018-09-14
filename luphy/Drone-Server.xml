@@ -32,6 +32,10 @@
 			<Name>DRONE_ADMIN</Name>
 		</Variable>
 		<Variable>
+			<Value>true</Value>
+			<Name>DRONE_GITHUB</Name>
+		</Variable>
+		<Variable>
 			<Value></Value>
 			<Name>DRONE_GITHUB_CLIENT</Name>
 		</Variable>
