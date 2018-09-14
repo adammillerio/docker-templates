@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-09-12</Date>
+	<Beta>False</Beta>
+	<Name>Drone Server</Name>
+	<Project>https://drone.io</Project>
+	<Overview>
+		Drone CI/CD Server
+	</Overview>
+	<Description>
+		Drone CI/CD Server
+	</Description>
+	<Registry>https://hub.docker.com/r/drone/drone/</Registry>
+	<Repository>drone/drone:0.8</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Value>true</Value>
+			<Name>DRONE_OPEN</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_HOST</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_ORGS</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_ADMIN</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_GITHUB_CLIENT</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_GITHUB_SECRET</Name>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>DRONE_SECRET</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>9000</HostPort>
+				<ContainerPort>9000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Drone-Server</HostDir>
+			<ContainerDir>/var/lib/drone</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Drone-Server.png</Icon>
+</Containers>
