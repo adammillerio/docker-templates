@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-10-20</Date>
+	<Beta>False</Beta>
+	<Name>Postgres</Name>
+	<Project>https://www.postgresql.org/</Project>
+	<Overview>
+		Postgres Relational Database Server
+	</Overview>
+	<Description>
+		Postgres Relational Database Server
+	</Description>
+	<Registry>https://hub.docker.com/_/postgres/</Registry>
+	<Repository>postgres:11.0</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+			<Value></Value>
+			<Name>POSTGRES_PASSWORD</Name>
+		</Variable>
+		<Variable>
+			<Value>postgres</Value>
+			<Name>POSTGRES_USER</Name>
+		</Variable>
+		<Variable>
+			<Value>postgres</Value>
+			<Name>POSTGRES_DB</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>5432</HostPort>
+				<ContainerPort>5432</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Postgres</HostDir>
+			<ContainerDir>/var/lib/postgresql/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Postgres.png</Icon>
+</Containers>
