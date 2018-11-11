@@ -15,6 +15,7 @@
 	<Repository>aemiller/subsonic:latest</Repository>
 	<Privileged>false</Privileged>
 	<Network>bridge</Network>
+	<ExtraParams>--add-host=subsonic.org:127.0.0.1</ExtraParams>
 	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Subsonic.png</Icon>
 	<Data>
 		<Volume>
