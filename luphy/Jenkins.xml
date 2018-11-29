@@ -36,6 +36,11 @@
 			<ContainerDir>/var/jenkins_home</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
+		<Volume>
+			<HostDir>/var/run/docker.sock</HostDir>
+			<ContainerDir>/var/run/docker.sock</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
 	</Data>
 	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Jenkins.png</Icon>
 </Containers>
