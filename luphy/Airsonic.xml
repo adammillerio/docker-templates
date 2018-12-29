@@ -19,7 +19,7 @@
 	<Data>
 		<Volume>
 			<HostDir>/mnt/user/appdata/Airsonic</HostDir>
-			<ContainerDir>/airsonic/data</ContainerDir>
+			<ContainerDir>/config</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
