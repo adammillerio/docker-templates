@@ -12,7 +12,7 @@
 	</Description>
 	<Registry>https://hub.docker.com/r/adammillerio/airsonic/</Registry>
 	<GitHub>https://github.com/adammillerio/docker-airsonic</GitHub>
-	<Repository>adammillerio/subsonic:latest</Repository>
+	<Repository>adammillerio/airsonic:latest</Repository>
 	<Privileged>false</Privileged>
 	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Airsonic.png</Icon>
 	<BindTime>true</BindTime>
