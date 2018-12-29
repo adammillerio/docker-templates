@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-12-28</Date>
+	<Beta>False</Beta>
+	<Name>Portainer</Name>
+	<Project>https://portainer.io/</Project>
+	<Overview>
+		Portainer - Docker container management GUI.
+	</Overview>
+	<Description>
+		Portainer - Docker container management GUI.
+	</Description>
+	<Registry>https://hub.docker.com/r/portainer/portainer/</Registry>
+	<GitHub>https://github.com/portainer/portainer</GitHub>
+	<Repository>portainer/portainer:1.20.0</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Portainer.png</Icon>
+	<BindTime>true</BindTime>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Portainer</HostDir>
+			<ContainerDir>/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/var/run/docker.sock</HostDir>
+			<ContainerDir>/var/run/docker.sock</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>9000</HostPort>
+				<ContainerPort>9000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
