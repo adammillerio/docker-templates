@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-12-28</Date>
+	<Beta>False</Beta>
+	<Name>Airsonic</Name>
+	<Project>https://airsonic.github.io/</Project>
+	<Overview>
+		Subsonic Fork - Self-hosted music library and player.
+	</Overview>
+	<Description>
+		Subsonic Fork - Self-hosted music library and player.
+	</Description>
+	<Registry>https://hub.docker.com/r/adammillerio/airsonic/</Registry>
+	<GitHub>https://github.com/adammillerio/docker-airsonic</GitHub>
+	<Repository>adammillerio/subsonic:latest</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Airsonic.png</Icon>
+	<BindTime>true</BindTime>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Airsonic</HostDir>
+			<ContainerDir>/airsonic/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>4040</HostPort>
+				<ContainerPort>4040</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
