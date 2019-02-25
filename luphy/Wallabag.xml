@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-02-24</Date>
+	<Beta>False</Beta>
+	<Name>Wallabag</Name>
+	<Project>https://www.wallabag.org/en</Project>
+	<Overview>
+		Wallabag - Save and Classify Articles. Read them later.
+	</Overview>
+	<Description>
+		Wallabag - Save and Classify Articles. Read them later.
+	</Description>
+	<Registry>https://hub.docker.com/r/wallabag/wallabag/</Registry>
+	<GitHub>https://github.com/wallabag/wallabag</GitHub>
+	<Repository>wallabag/wallabag:2.3.5</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Wallabag.png</Icon>
+	<BindTime>true</BindTime>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Wallabag/data</HostDir>
+			<ContainerDir>/var/www/wallabag/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Wallabag/images</HostDir>
+			<ContainerDir>/var/www/wallabag/assets/images</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8080</HostPort>
+				<ContainerPort>80</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
