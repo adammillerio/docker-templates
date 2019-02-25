@@ -16,6 +16,20 @@
 	<Privileged>false</Privileged>
 	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Wallabag.png</Icon>
 	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>false</Value>
+			<Name>SYMFONY__ENV__FOSUSER_REGISTRATION</Name>
+		</Variable>
+		<Variable>
+			<Value>false</Value>
+			<Name>SYMFONY__ENV__FOSUSER_CONFIRMATION</Name>
+		</Variable>
+		<Variable>
+			<Value>https://your-wallabag-url-instance.com</Value>
+			<Name>SYMFONY__ENV__DOMAIN_NAME</Name>
+		</Variable>
+	</Environment>
 	<Data>
 		<Volume>
 			<HostDir>/mnt/user/appdata/Wallabag/data</HostDir>
