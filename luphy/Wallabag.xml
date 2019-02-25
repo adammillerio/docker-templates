@@ -29,6 +29,10 @@
 			<Value>https://your-wallabag-url-instance.com</Value>
 			<Name>SYMFONY__ENV__DOMAIN_NAME</Name>
 		</Variable>
+		<Variable>
+			<Value>ovmpmAWXRCabNlMgzlzFXDYmCFfzGv</Value>
+			<Name>SYMFONY__ENV__SECRET</Name>
+		</Variable>
 	</Environment>
 	<Data>
 		<Volume>
