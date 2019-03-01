@@ -12,7 +12,7 @@
 	</Description>
 	<Registry>https://hub.docker.com/r/aemiller/unifi/</Registry>
 	<GitHub>https://github.com/adammillerio/docker-unifi</GitHub>
-	<Repository>aemiller/unifi:latest</Repository>
+	<Repository>adammillerio/unifi:latest</Repository>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Environment>
