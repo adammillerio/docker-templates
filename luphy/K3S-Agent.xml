@@ -2,7 +2,7 @@
 <Containers>
 	<Date>2018-03-04</Date>
 	<Beta>False</Beta>
-	<Name>K3S-Server</Name>
+	<Name>K3S-Agent</Name>
 	<Project>https://k3s.io/</Project>
 	<Overview>
 		K3S (Agent) - Lightweight Kubernetes.
