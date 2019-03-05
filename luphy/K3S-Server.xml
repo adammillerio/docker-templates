@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-03-04</Date>
+	<Beta>False</Beta>
+	<Name>K3S-Server</Name>
+	<Project>https://k3s.io/</Project>
+	<Overview>
+		K3S (Server) - Lightweight Kubernetes.
+	</Overview>
+	<Description>
+		K3S (Server) - Lightweight Kubernetes.
+	</Description>
+	<Registry>https://hub.docker.com/r/rancher/k3s/</Registry>
+	<GitHub>https://github.com/rancher/k3s</GitHub>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/K3S.png</Icon>
+	<Repository>rancher/k3s:v0.1.0</Repository>
+	<PostArgs>server --disable-agent</PostArgs>
+	<Privileged>false</Privileged>
+	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>qAV7GtSR5hDNLhUVpx7RVfb7</Value>
+			<Name>K3S_CLUSTER_SECRET</Name>
+		</Variable>
+		<Variable>
+			<Value>/output/kubeconfig.yaml</Value>
+			<Name>K3S_KUBECONFIG_OUTPUT</Name>
+		</Variable>
+		<Variable>
+			<Value>666</Value>
+			<Name>K3S_KUBECONFIG_MODE</Name>
+		</Variable>
+	</Environment>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/K3S-Server/k3s</HostDir>
+			<ContainerDir>/var/lib/rancher/k3s</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/K3S-Server/output</HostDir>
+			<ContainerDir>/output</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>6443</HostPort>
+				<ContainerPort>6443</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>

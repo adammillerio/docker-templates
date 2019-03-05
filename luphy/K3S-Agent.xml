@@ -1,0 +1,35 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-03-04</Date>
+	<Beta>False</Beta>
+	<Name>K3S-Server</Name>
+	<Project>https://k3s.io/</Project>
+	<Overview>
+		K3S (Agent) - Lightweight Kubernetes.
+	</Overview>
+	<Description>
+		K3S (Agent) - Lightweight Kubernetes.
+	</Description>
+	<Registry>https://hub.docker.com/r/rancher/k3s/</Registry>
+	<GitHub>https://github.com/rancher/k3s</GitHub>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/K3S.png</Icon>
+	<Repository>rancher/k3s:v0.1.0</Repository>
+	<PostArgs>agent --docker</PostArgs>
+	<ExtraParams>--tmpfs=/var/run --tmpfs=/run</ExtraParams>
+	<Privileged>true</Privileged>
+	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>qAV7GtSR5hDNLhUVpx7RVfb7</Value>
+			<Name>K3S_CLUSTER_SECRET</Name>
+		</Variable>
+		<Variable>
+			<Value>https://localhost:6443</Value>
+			<Name>K3S_URL</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+	</Networking>
+</Containers>
