@@ -28,6 +28,13 @@
 			<Name>K3S_URL</Name>
 		</Variable>
 	</Environment>
+	<Data>
+		<Volume>
+			<HostDir>/var/run/docker.sock</HostDir>
+			<ContainerDir>/var/run/docker.sock</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
 	<Networking>
 		<Mode>bridge</Mode>
 	</Networking>
