@@ -1,0 +1,42 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2018-12-18</Date>
+	<Beta>False</Beta>
+	<Name>BitlBee</Name>
+	<Project>https://github.com/bitlbee/bitlbee</Project>
+	<Overview>
+		An IRC to other chat networks gateway.
+	</Overview>
+	<Description>
+		An IRC to other chat networks gateway.
+	</Description>
+	<Registry>https://hub.docker.com/r/adammillerio/bitlbee/</Registry>
+	<GitHub>https://github.com/bitlbee/bitlbee</GitHub>
+	<Repository>adammillerio/bitlbee:latest</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/BitlBee.png</Icon>
+	<BindTime>true</BindTime>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/BitlBee/conf</HostDir>
+			<ContainerDir>/usr/local/etc/bitlbee</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/BitlBee/data</HostDir>
+			<ContainerDir>/var/lib/bitlbee</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>6667</HostPort>
+				<ContainerPort>6667</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
