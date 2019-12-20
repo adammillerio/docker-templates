@@ -12,7 +12,7 @@
 	</Description>
 	<Registry>https://hub.docker.com/r/aemiller/znc/</Registry>
 	<GitHub>https://github.com/adammillerio/docker-znc</GitHub>
-	<Repository>aemiller/znc:latest</Repository>
+	<Repository>adammillerio/znc:latest</Repository>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Networking>
