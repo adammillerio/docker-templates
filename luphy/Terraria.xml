@@ -12,7 +12,7 @@
 	</Description>
 	<Registry>https://hub.docker.com/r/kaysond/docker-terraria</Registry>
 	<GitHub>https://github.com/kaysond/docker-terraria</GitHub>
-	<Repository>kaysond/docker-terraria:latest</Repository>
+	<Repository>adammillerio/docker-terraria:latest</Repository>
 	<Privileged>false</Privileged>
 	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Terraria.png</Icon>
 	<BindTime>true</BindTime>
