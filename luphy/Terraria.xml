@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2021-11-10</Date>
+	<Beta>False</Beta>
+	<Name>Terraria</Name>
+	<Project>https://github.com/kaysond/docker-terraria</Project>
+	<Overview>
+		Terraria Game Server
+	</Overview>
+	<Description>
+		Terraria game server.
+	</Description>
+	<Registry>https://hub.docker.com/r/kaysond/docker-terraria</Registry>
+	<GitHub>https://github.com/kaysond/docker-terraria</GitHub>
+	<Repository>kaysond/docker-terraria:latest</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Terraria.png</Icon>
+	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>99</Value>
+			<Name>PUID</Name>
+		</Variable>
+		<Variable>
+			<Value>100</Value>
+			<Name>PGID</Name>
+		</Variable>
+	</Environment>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Terraria/config</HostDir>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Terraria/world</HostDir>
+			<ContainerDir>/world</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>7777</HostPort>
+				<ContainerPort>7777</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
