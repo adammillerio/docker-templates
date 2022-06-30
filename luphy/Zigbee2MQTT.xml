@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2021-01-19</Date>
+	<Beta>False</Beta>
+	<Name>Zigbee2MQTT</Name>
+	<Project>https://www.zigbee2mqtt.io/</Project>
+	<Overview>
+		Zigbee2MQTT Brdge.
+	</Overview>
+	<Description>
+		Zigbee2MQTT Brdge.
+	</Description>
+	<Registry>https://hub.docker.com/r/koenkk/zigbee2mqtt</Registry>
+	<GitHub>https://github.com/koenkk/zigbee2mqtt</GitHub>
+	<Repository>koenkk/zigbee2mqtt:latest</Repository>
+	<Privileged>true</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Zigbee2MQTT.png</Icon>
+	<BindTime>true</BindTime>
+	<ExtraParams>--device=/dev/ttyUSB0</ExtraParams>
+	<Environment>
+		<Variable>
+			<Value>TZ</Value>
+			<Name>America/New_York</Name>
+		</Variable>
+	</Environment>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Zigbee2MQTT</HostDir>
+			<ContainerDir>/app/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8080</HostPort>
+				<ContainerPort>8080</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>1883</HostPort>
+				<ContainerPort>1833</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
