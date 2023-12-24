@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2023-12-24</Date>
+	<Beta>False</Beta>
+	<Name>Storyteller-Web</Name>
+	<Project>https://smoores.gitlab.io/storyteller/</Project>
+	<Overview>
+		Storyteller EBook sync service, web server.
+	</Overview>
+	<Description>
+		Storyteller EBook sync service, web server.
+	</Description>
+	<Registry>https://gitlab.com/smoores/storyteller/container_registry</Registry>
+	<GitHub>https://gitlab.com/smoores/storyteller</GitHub>
+	<Repository>registry.gitlab.com/smoores/storyteller/web:latest</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Storyteller-Web.png</Icon>
+	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>STORYTELLER_API_HOST</Value>
+			<Name>http://Storyteller-API:8000</Name>
+		</Variable>
+		<Variable>
+			<Value>PUBLIC_STORYTELLER_API_HOST</Value>
+			<Name>http://Storyteller-API:8000</Name>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>storyteller</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8001</HostPort>
+				<ContainerPort>8001</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>

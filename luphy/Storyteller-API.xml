@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2023-12-24</Date>
+	<Beta>False</Beta>
+	<Name>Storyteller-API</Name>
+	<Project>https://smoores.gitlab.io/storyteller/</Project>
+	<Overview>
+		Storyteller EBook sync service, API server.
+	</Overview>
+	<Description>
+		Storyteller EBook sync service, API server.
+	</Description>
+	<Registry>https://gitlab.com/smoores/storyteller/container_registry</Registry>
+	<GitHub>https://gitlab.com/smoores/storyteller</GitHub>
+	<Repository>registry.gitlab.com/smoores/storyteller/api:latest</Repository>
+	<Privileged>false</Privileged>
+	<Icon>https://raw.githubusercontent.com/adammillerio/docker-templates/master/icons/Storyteller-API.png</Icon>
+	<BindTime>true</BindTime>
+	<Environment>
+		<Variable>
+			<Value>STORYTELLER_ALLOWED_ORIGINS</Value>
+			<Name>http://localhost:8001</Name>
+		</Variable>
+		<Variable>
+			<Value>UVICORN_PORT</Value>
+			<Name>8000</Name>
+		</Variable>
+	</Environment>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Storyteller-API</HostDir>
+			<ContainerDir>/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Networking>
+		<Mode>storyteller</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8000</HostPort>
+				<ContainerPort>8000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+</Containers>
