@@ -18,12 +18,12 @@
 	<BindTime>true</BindTime>
 	<Environment>
 		<Variable>
-			<Value>STORYTELLER_API_HOST</Value>
-			<Name>http://Storyteller-API:8000</Name>
+			<Name>STORYTELLER_API_HOST</Name>
+			<Value>http://Storyteller-API:8000</Value>
 		</Variable>
 		<Variable>
-			<Value>PUBLIC_STORYTELLER_API_HOST</Value>
-			<Name>http://Storyteller-API:8000</Name>
+			<Name>PUBLIC_STORYTELLER_API_HOST</Name>
+			<Value>http://Storyteller-API:8000</Value>
 		</Variable>
 	</Environment>
 	<Networking>

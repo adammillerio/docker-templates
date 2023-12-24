@@ -18,12 +18,12 @@
 	<BindTime>true</BindTime>
 	<Environment>
 		<Variable>
-			<Value>STORYTELLER_ALLOWED_ORIGINS</Value>
-			<Name>http://localhost:8001</Name>
+			<Name>STORYTELLER_ALLOWED_ORIGINS</Name>
+			<Value>http://localhost:8001</Value>
 		</Variable>
 		<Variable>
-			<Value>UVICORN_PORT</Value>
-			<Name>8000</Name>
+			<Name>UVICORN_PORT</Name>
+			<Value>8000</Value>
 		</Variable>
 	</Environment>
 	<Data>
